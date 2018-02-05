@@ -1,0 +1,29 @@
+{
+    "aliosStudio.inner.yosBin": "aos",
+    "aliosStudio.hardware.board": "mvsp20xx",
+    "aliosStudio.name": "helloworld",
+    "aliosStudio.buildList": [
+        {
+            "name": "clean"
+        },
+        {
+            "name": "alinkapp@mk3060"
+        },
+        {
+            "name": "alinkapp@mk3060 JTAG=jlink download"
+        },
+        {
+            "name": "helloworld@mk3060"
+        },
+        {
+            "name": "helloworld@mvsp20xx"
+        },
+        {
+            "name": "helloworld@esp32devkitc"
+        }
+    ],
+    "aliosStudio.build.multiBin": false,
+    "aliosStudio.build.multiBinTarget": "app",
+    "aliosStudio.flashAllBin": false,
+    "aliosStudio.isAosSource": true
+}

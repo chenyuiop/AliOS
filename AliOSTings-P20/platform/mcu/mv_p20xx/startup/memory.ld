@@ -1,0 +1,5 @@
+MEMORY
+{
+ flash (rx) : ORIGIN = 0x000000, LENGTH = 0x80000
+ ram (rwx): ORIGIN = 0x20002000, LENGTH = 184k 
+}

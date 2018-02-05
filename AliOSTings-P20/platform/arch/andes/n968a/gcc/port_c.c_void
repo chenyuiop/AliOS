@@ -1,0 +1,83 @@
+/*
+ * Copyright (C) 2015-2017 Alibaba Group Holding Limited
+ */
+
+#include <k_api.h>
+/* Processor constants. */
+#include "os_cpu.h"
+
+//#include "irqn.h"
+#include <nds32_intrinsic.h>
+
+
+#define portNO_CRITICAL_NESTING		( ( unsigned long ) 0 )
+volatile unsigned long ulCriticalNesting = 0UL;
+
+
+/*-----------------------------------------------------------*/
+extern void CtxSave(void);
+extern void CtxRestore(void);
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------*/
+
+
+void *cpu_task_stack_init(cpu_stack_t *base, size_t size, void *arg, task_entry_t entry)
+{
+
+	return 0;
+
+}
+
+
+
+
+
+void cpu_first_task_start( void )  //xPortStartScheduler
+{
+
+}
+
+
+size_t cpu_intrpt_save(void)
+{
+    uint32_t psw_0 = 0;
+
+    return psw_0;
+}
+
+void cpu_intrpt_restore(size_t cpsr)
+{
+
+
+}
+
+
+void   cpu_intrpt_switch(void)
+{
+
+
+
+}
+void   cpu_task_switch(void)
+{
+
+
+
+
+}
+
+
+
+
+
+
+

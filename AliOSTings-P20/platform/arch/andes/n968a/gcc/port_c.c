@@ -173,8 +173,8 @@ void cpu_first_task_start( void )  //xPortStartScheduler
 	NVIC_SetPriority(TMR2_IRQn,2);
 
 	Timer_Config(TIMER2,1000000/RHINO_CONFIG_TICKS_PER_SECOND,0);
-	Timer_Start(TIMER2);
-	GIE_ENABLE();
+	Timer_Start(TIMER2);	
+	__builtin_nds32_setgie_en();//GIE_ENABLE();
 	/* Start the first task. */
 	CtxRestore();//vPortISRStartFirstTask();
 }

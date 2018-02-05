@@ -139,8 +139,8 @@ void __c_init()
 #define MEMCPY(des, src, n) __builtin_memcpy ((des), (src), (n))
 #define MEMSET(s, c, n) __builtin_memset ((s), (c), (n))
 
-	extern char _end;
-	extern char __bss_start;
+	//extern char _end;
+	//extern char __bss_start;
 	int size;
 
 	/* data section will be copied before we remap.

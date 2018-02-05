@@ -64,8 +64,10 @@ static inline void GIE_SAVE(unsigned long *var)
 
 static inline void GIE_RESTORE(unsigned long var)
 {
+
 	if (var & PSW_mskGIE)
-		GIE_ENABLE();
+		__builtin_nds32_setgie_en();
+		//GIE_ENABLE();
 
 }
 

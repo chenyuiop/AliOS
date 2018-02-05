@@ -22,6 +22,8 @@
 ktask_t *g_aos_init;
 extern int application_start(int argc, char **argv);
 char Uart_RxBuf[256];
+extern void hal_init(void);
+extern void board_init(void);
 
 static uint8_t DmaChannelMap[27] =
 {

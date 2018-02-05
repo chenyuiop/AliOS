@@ -23,7 +23,7 @@
 #define		__TYPES_H__
 
 #include <stdint.h>
-#include <stdbool.h>
+//#include <stdbool.h>
 #ifdef __cplusplus
 extern "C" {
 #endif//__cplusplus
@@ -37,7 +37,9 @@ extern "C" {
 
 typedef	void(*FPCALLBACK)(void);
 
-//typedef unsigned char   		bool;
+#ifndef bool
+typedef unsigned char   		bool;
+#endif
 typedef bool(*TerminateFunc)(void);
 
 //#ifndef int8_t
@@ -97,10 +99,10 @@ typedef unsigned int			uint32;
 #define __NO_INIT__
 #else                      // For other compiler
 #define __ATTRIBUTE__(keyword)  keyword
-#define BITBAND
-#define AT(address)
-#define SECTION(name)
-#define WEAK
+//#define BITBAND
+//#define AT(address)
+//#define SECTION(name)
+//#define WEAK
 #define UNUSED
 #define __NO_INIT__
 #endif
